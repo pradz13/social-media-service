@@ -17,8 +17,10 @@ VALUES(1, 1, 1);
 INSERT INTO USER_SKILLS(id, user_id, skill_id)
 VALUES(2, 1, 2);
 INSERT INTO USER_SKILLS(id, user_id, skill_id)
-VALUES(3, 2, 2);
+VALUES(3, 2, 1);
 INSERT INTO USER_SKILLS(id, user_id, skill_id)
-VALUES(4, 2, 3);
+VALUES(4, 2, 2);
+INSERT INTO USER_SKILLS(id, user_id, skill_id)
+VALUES(5, 2, 3);
 
 commit;
