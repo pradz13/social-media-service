@@ -27,3 +27,11 @@ on p.id = c.post_id
 INNER JOIN USER_PROFILE u
 on p.user_id = u.id
 where u.id = 1;
+
+--Select all the posts and their comments even if comment does not exist for a post(Left join is used)
+select u.name, p.post_content, c.comment_content
+from POST p
+LEFT JOIN COMMENT c
+on p.id = c.post_id
+INNER JOIN USER_PROFILE u
+on p.user_id = u.id;
