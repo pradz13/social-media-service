@@ -24,7 +24,7 @@ CREATE TABLE USER_SKILLS(
 );
 
 CREATE TABLE POST(
-	id int NOT NULL,
+    id int NOT NULL,
     user_id int NOT NULL,
     post_content LONGTEXT NOT null,
     PRIMARY KEY(id),
@@ -32,11 +32,22 @@ CREATE TABLE POST(
 );
 
 CREATE TABLE COMMENT(
-	id int NOT NULL,
+    id int NOT NULL,
     user_id int NOT NULL,
     post_id int NOT NULL,
     comment_content LONGTEXT NOT null,
     PRIMARY KEY(id),
     CONSTRAINT FK_USER_WITH_COMMENT FOREIGN KEY (user_id) REFERENCES USER_PROFILE(id),
     CONSTRAINT FK_POST_WITH_COMMENT FOREIGN KEY (post_id) REFERENCES POST(id)
+);
+
+CREATE TABLE LIKES(
+    id int NOT NULL,
+    entity_id int NOT NULL,
+    entity_type varchar(50) NOT NULL,
+    user_id int NOT NULL,
+    PRIMARY KEY(id),
+    CONSTRAINT FK_USER_WITH_LIKES FOREIGN KEY (user_id) REFERENCES USER_PROFILE(id),
+    CONSTRAINT FK_POST_WITH_LIKES FOREIGN KEY (entity_id) REFERENCES POST(id),
+    CONSTRAINT FK_COMMENT_WITH_LIKES FOREIGN KEY (entity_id) REFERENCES COMMENT(id)
 );
