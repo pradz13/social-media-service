@@ -23,4 +23,22 @@ VALUES(4, 2, 2);
 INSERT INTO USER_SKILLS(id, user_id, skill_id)
 VALUES(5, 2, 3);
 
+INSERT INTO POST(id, user_id, post_content)
+VALUES(1, 1, 'Post 1');
+INSERT INTO POST(id, user_id, post_content)
+VALUES(2, 1, 'Post 2');
+INSERT INTO POST(id, user_id, post_content)
+VALUES(3, 1, 'Post 3');
+INSERT INTO POST(id, user_id, post_content)
+VALUES(4, 2, 'Post 4');
+
+INSERT INTO COMMENT(id, user_id, post_id, comment_content)
+VALUES(1, 1, 1, 'Comment 1');
+INSERT INTO COMMENT(id, user_id, post_id, comment_content)
+VALUES(2, 1, 1, 'Comment 2');
+INSERT INTO COMMENT(id, user_id, post_id, comment_content)
+VALUES(3, 1, 1, 'Comment 3');
+INSERT INTO COMMENT(id, user_id, post_id, comment_content)
+VALUES(4, 2, 1, 'Comment 4');
+
 commit;
