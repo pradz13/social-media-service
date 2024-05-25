@@ -41,4 +41,9 @@ VALUES(3, 1, 1, 'Comment 3');
 INSERT INTO COMMENT(id, user_id, post_id, comment_content)
 VALUES(4, 2, 1, 'Comment 4');
 
+INSERT INTO LIKES(id, entity_id, entity_type, user_id) values
+(1, 1, 'POST', 1);
+INSERT INTO LIKES(id, entity_id, entity_type, user_id) values
+(2, 1, 'COMMENT', 2);
+
 commit;
