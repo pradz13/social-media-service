@@ -46,4 +46,7 @@ INSERT INTO LIKES(id, entity_id, entity_type, user_id) values
 INSERT INTO LIKES(id, entity_id, entity_type, user_id) values
 (2, 1, 'COMMENT', 2);
 
+INSERT INTO CONNECTION(id, user_id_1, user_id_2, is_accepted)
+VALUES(1, 1, 2, 0);
+
 commit;
