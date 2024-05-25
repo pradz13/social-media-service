@@ -49,4 +49,7 @@ INSERT INTO LIKES(id, entity_id, entity_type, user_id) values
 INSERT INTO CONNECTION(id, user_id_1, user_id_2, is_accepted)
 VALUES(1, 1, 2, 0);
 
+INSERT INTO RECOMMENDATION(id, user_id, recipient_id, recommendation_text)
+VALUES(1, 1, 2, 'RECOMMENDATION 1');
+
 commit;
